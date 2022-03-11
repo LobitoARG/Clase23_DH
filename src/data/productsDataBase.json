@@ -168,5 +168,14 @@
     "description": "213",
     "image": "nombre_imagen1646951050484.jpg",
     "id": 19
+  },
+  {
+    "name": "Lobito",
+    "price": "19999",
+    "discount": "15",
+    "category": "in-sale",
+    "description": "Es un lobito",
+    "image": "nombre_imagen1647030323993.jpg",
+    "id": 20
   }
 ]
