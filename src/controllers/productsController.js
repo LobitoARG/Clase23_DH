@@ -17,6 +17,7 @@ const controller = {
 	detail: (req, res) => {
 		
 		let idProducto = req.params.id;
+		console.log(idProducto);
 		res.render('detail',{"productoSeleccionado": products[idProducto-1]});
 	},
 
@@ -55,8 +56,10 @@ const controller = {
 		
 		let id = req.params.id;
 		let infoForm=req.body;
-		
+		console.log(infoForm);
+		console.log(id);
 
+		/*
 		products.forEach(function (elemento){
 			if (elemento.id == id)
 			{
@@ -70,9 +73,7 @@ const controller = {
 	
 		fs.writeFileSync(productsFilePath,JSON.stringify(products))
 
-		res.redirect('/')
-
-		//console.log(infoForm)
+		res.redirect('/')*/
 	},
 
 	// Delete - Delete one product from DB

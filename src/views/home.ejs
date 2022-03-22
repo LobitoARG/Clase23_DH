@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Editando: '}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="col-12">
+			<form method="POST" action="/home">
+				<div class="row product-detail">
+
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Ingrese su nombre:</label>
+						<input type="text" id="name" name="name" class="form-input" required>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<label for="color" class="form-label">Colores:</label>
+						<select name="color" id="color" class="form-input" required>
+							<option value="red">Rojo</option>
+							<option value="green">Verde</option>
+							<option value="blue">Azul</option>
+                            <option value="yellow">Amarillo</option>
+                            <option value="black">Negro</option>
+						</select>
+					</div>
+
+					<div class="col-12 col-md-6">
+						<label for="email" class="form-label">Ingrese su mail:</label>
+						<input type="email" id="email" name="email" class="form-input" required>
+					</div>
+					
+					<div class="col-12">
+						<label for="age" class="form-label">Edad:</label>
+						<input type="number" name="age" id="age" class="form-input" min="0">
+					</div>
+
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Enviar</button>
+					</div>
+				</div>
+			</form>
+            <% if(typeof datosObtenidos != 'undefined') { %>
+                <h3>Hola <%= datosObtenidos.name %> elegiste el color: <%= datosObtenidos.color %>, tu email es:
+                    <%= datosObtenidos.email %> y tu edad es: <%= datosObtenidos.age %> </h3>  
+                <% } %> 
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
